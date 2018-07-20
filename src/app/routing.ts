@@ -13,6 +13,11 @@ const routes = [
         canLoad: [AuthGuard]
     },
     {
+        path: 'home2',
+        loadChildren: './components/home2/home.module#Home2Module',
+        canLoad: [AuthGuard]
+    },
+    {
         path: 'sign-up',
         loadChildren: './components/sign-up/sign-up.module#SignUpModule',
         canLoad: [AuthGuard]
