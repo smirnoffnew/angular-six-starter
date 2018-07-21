@@ -13,8 +13,8 @@ const routes = [
         canLoad: [AuthGuard]
     },
     {
-        path: 'home2',
-        loadChildren: './components/home2/home.module#Home2Module',
+        path: 'calendar',
+        loadChildren: './components/calendar/calendar.module#CalendarModule',
         canLoad: [AuthGuard]
     },
     {

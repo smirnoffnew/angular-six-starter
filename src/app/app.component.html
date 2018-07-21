@@ -1,16 +1,17 @@
 <div class="container">
-  <mat-toolbar>
+  <mat-toolbar class="navBar">
     <button mat-icon-button (click)="snav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <h1 class="app-name">Responsive App</h1>
+    <h1 class="app-name">Year Progress</h1>
+    <mat-progress-bar mode="buffer" class="progress-bar"></mat-progress-bar>
   </mat-toolbar>
 
   <mat-sidenav-container class="sidenav-container">
     <mat-sidenav #snav class="sidenav">
       <mat-nav-list>
         <a href="" [routerLink]="['/home']" mat-list-item>home</a>
-        <a href="" [routerLink]="['/home2']" mat-list-item>home2</a>
+        <a href="" [routerLink]="['/calendar']" mat-list-item>calendar</a>
         <a href="" [routerLink]="['/sign-in']" mat-list-item>sign in</a>
         <a href="" [routerLink]="['/sign-up']" mat-list-item>sign up</a>
         <a href="" [routerLink]="['/about-us']" mat-list-item>about us</a>

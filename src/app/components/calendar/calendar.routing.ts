@@ -4,12 +4,12 @@
 import {ModuleWithProviders} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {AuthGuard} from "../../core/auth.guard.service";
-import {HomeComponent} from "./home.component";
+import {CalendarComponent} from "./calendar.component";
 
 export const routs = [
     {
         path: '',
-        component: HomeComponent,
+        component: CalendarComponent,
         canActivate: [AuthGuard],
         children: []
     }

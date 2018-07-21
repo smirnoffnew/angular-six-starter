@@ -8,3 +8,11 @@
 .scroll-view-outer-container {
     box-shadow: 5px 6px 30px 5px rgba(136, 136, 136, 0.8) !important;
 }
+
+.awesome-calendar .cell.hovered {
+    background: transparent !important;
+}
+
+mat-progress-bar .mat-progress-bar-primary.mat-progress-bar-fill.mat-progress-bar-element {
+    background-color: red !important;
+}
