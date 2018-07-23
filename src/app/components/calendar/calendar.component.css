@@ -1,3 +1,5 @@
+/*@import "../../../../node_modules/flipclock/dist/flipclock.css";*/
+
 :host {
     width: 100%;
     padding: 50px;
@@ -7,6 +9,3 @@
 .scroll-view-inner-container {
     overflow-y: hidden !important;
 }
-
-
-

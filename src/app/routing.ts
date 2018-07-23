@@ -32,6 +32,14 @@ const routes = [
         loadChildren: './components/about-us/about-us.module#AboutUsModule',
         canLoad: [AuthGuard]
     },
+
+    {
+        path: 'clock',
+        loadChildren: './components/clock/clock.module#ClockModule',
+        canLoad: [AuthGuard]
+    },
+
+
     {
         path: '',
         pathMatch: 'full',

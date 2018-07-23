@@ -16,6 +16,7 @@ import {AuthGuard} from "./core/auth.guard.service";
         MatModule,
         routing
     ],
+    exports: [BrowserModule],
     providers: [AuthGuard],
     bootstrap: [AppComponent]
 })

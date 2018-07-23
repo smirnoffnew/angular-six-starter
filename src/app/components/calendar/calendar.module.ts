@@ -6,10 +6,11 @@ import {routing} from './calendar.routing';
 import {CalendarComponent} from "./calendar.component";
 import {InfiniteCalendarModule} from "ng-infinite-calendar";
 import {MatModule} from "../../mat.module";
+import { CommonModule } from '@angular/common';
 
 @NgModule({
     declarations: [ CalendarComponent ],
-    imports: [InfiniteCalendarModule, MatModule, routing],
+    imports: [CommonModule, InfiniteCalendarModule, MatModule, routing],
     providers: []
 })
 export class CalendarModule {}
