@@ -7,7 +7,6 @@ import {TileGroupComponent} from "./components/tile-group/tile-group.component";
 import {LabelComponent} from "./components/tile-group/label/label.component";
 import {DotsComponent} from "./components/dots/dots.component";
 import {CommonModule} from '@angular/common';
-import {routing} from "./clock.routing";
 
 @NgModule({
     declarations: [
@@ -19,8 +18,9 @@ import {routing} from "./clock.routing";
         LabelComponent,
         DotsComponent
     ],
-    imports: [CommonModule, routing],
-    bootstrap: [ClockComponent]
+    imports: [CommonModule],
+    bootstrap: [ClockComponent],
+    exports:[ClockComponent]
 })
 
 export class ClockModule {
