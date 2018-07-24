@@ -1,7 +1,4 @@
-/**
- * Created by hkuehl on 08.05.2017.
- */
-import {Component, Input, OnChanges, OnInit, SimpleChange, SimpleChanges} from '@angular/core';
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 
 @Component({
     selector: 'tile',

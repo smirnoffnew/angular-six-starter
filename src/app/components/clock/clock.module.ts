@@ -1,6 +1,3 @@
-/**
- * Created by hkuehl on 08.05.2017.
- */
 import {NgModule} from '@angular/core';
 import {ClockComponent} from './clock.component';
 import {FlipClockComponent} from "./components/flip-clock/flip-clock.component";

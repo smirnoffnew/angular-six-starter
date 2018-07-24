@@ -1,5 +1,177 @@
-@import "../../styles/color.style";
-@import "../../styles/keyframe.style";
+@import "../../common_styles/color.style";
+@import "../../common_styles/keyframe.style";
+
+@-webkit-keyframes asd {
+  0% {
+    z-index: 2; }
+
+  20% {
+    z-index: 4; }
+
+  100% {
+    z-index: 4; }
+}
+
+@-moz-keyframes asd {
+  0% {
+    z-index: 2; }
+
+  20% {
+    z-index: 4; }
+
+  100% {
+    z-index: 4; }
+}
+
+@-o-keyframes asd {
+  0% {
+    z-index: 2; }
+
+  20% {
+    z-index: 4; }
+
+  100% {
+    z-index: 4; }
+}
+
+@keyframes asd {
+  0% {
+    z-index: 2; }
+
+  20% {
+    z-index: 4; }
+
+  100% {
+    z-index: 4; }
+}
+
+@-webkit-keyframes turn {
+  0% {
+    -webkit-transform: rotateX(90deg); }
+
+  100% {
+    -webkit-transform: rotateX(0deg); }
+}
+
+@-moz-keyframes turn {
+  0% {
+    -moz-transform: rotateX(90deg); }
+
+  100% {
+    -moz-transform: rotateX(0deg); }
+}
+
+@-o-keyframes turn {
+  0% {
+    -o-transform: rotateX(90deg); }
+
+  100% {
+    -o-transform: rotateX(0deg); }
+}
+
+@keyframes turn {
+  0% {
+    transform: rotateX(90deg); }
+
+  100% {
+    transform: rotateX(0deg); }
+}
+
+@-webkit-keyframes turn2 {
+  0% {
+    -webkit-transform: rotateX(0deg); }
+
+  100% {
+    -webkit-transform: rotateX(-90deg); }
+}
+
+@-moz-keyframes turn2 {
+  0% {
+    -moz-transform: rotateX(0deg); }
+
+  100% {
+    -moz-transform: rotateX(-90deg); }
+}
+
+@-o-keyframes turn2 {
+  0% {
+    -o-transform: rotateX(0deg); }
+
+  100% {
+    -o-transform: rotateX(-90deg); }
+}
+
+@keyframes turn2 {
+  0% {
+    transform: rotateX(0deg); }
+
+  100% {
+    transform: rotateX(-90deg); }
+}
+
+@-webkit-keyframes show {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; }
+}
+
+@-moz-keyframes show {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; }
+}
+
+@-o-keyframes show {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; }
+}
+
+@-webkit-keyframes hide {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; }
+}
+
+@-moz-keyframes hide {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; }
+}
+
+@-o-keyframes hide {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; }
+}
 
 .element {
   z-index: 1;
@@ -111,11 +283,11 @@
           animation: turn2 0.5s linear both;
 
           .shadow {
-            background: -moz-linear-gradient(top, $tileShadowBlack 0%, $black 100%);
+            background: -moz-linear-gradient(to top, $tileShadowBlack 0%, $black 100%);
             background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $tileShadowBlack), color-stop(100%, $black));
-            background: linear-gradient(top, $tileShadowBlack 0%, $black 100%);
-            background: -o-linear-gradient(top, $tileShadowBlack 0%, $black 100%);
-            background: -ms-linear-gradient(top, $tileShadowBlack 0%, $black 100%);
+            background: linear-gradient(to top, $tileShadowBlack 0%, $black 100%);
+            background: -o-linear-gradient(to top, $tileShadowBlack 0%, $black 100%);
+            background: -ms-linear-gradient(to top, $tileShadowBlack 0%, $black 100%);
             background: linear-gradient(to bottom, $tileShadowBlack 0%, $black 100%);
 
             -webkit-animation: show 0.5s linear both;
@@ -126,11 +298,11 @@
 
         .below {
           .shadow {
-            background: -moz-linear-gradient(top, $black 0%, $tileShadowBlack 100%);
+            background: -moz-linear-gradient(to top, $black 0%, $tileShadowBlack 100%);
             background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $black), color-stop(100%, $tileShadowBlack));
-            background: linear-gradient(top, $black 0%, $tileShadowBlack 100%);
-            background: -o-linear-gradient(top, $black 0%, $tileShadowBlack 100%);
-            background: -ms-linear-gradient(top, $black 0%, $tileShadowBlack 100%);
+            background: linear-gradient(to top, $black 0%, $tileShadowBlack 100%);
+            background: -o-linear-gradient(to top, $black 0%, $tileShadowBlack 100%);
+            background: -ms-linear-gradient(to top, $black 0%, $tileShadowBlack 100%);
             background: linear-gradient(to bottom, $black 0%, $tileShadowBlack 100%);
 
             -webkit-animation: show 0.5s linear both;
@@ -149,11 +321,11 @@
 
         .above {
           .shadow {
-            background: -moz-linear-gradient(top, $tileShadowBlack 0%, $black 100%);
+            background: -moz-linear-gradient(to top, $tileShadowBlack 0%, $black 100%);
             background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $tileShadowBlack), color-stop(100%, $black));
-            background: linear-gradient(top, $tileShadowBlack 0%, $black 100%);
-            background: -o-linear-gradient(top, $tileShadowBlack 0%, $black 100%);
-            background: -ms-linear-gradient(top, $tileShadowBlack 0%, $black 100%);
+            background: linear-gradient(to top, $tileShadowBlack 0%, $black 100%);
+            background: -o-linear-gradient(to top, $tileShadowBlack 0%, $black 100%);
+            background: -ms-linear-gradient(to top, $tileShadowBlack 0%, $black 100%);
             background: linear-gradient(to bottom, $tileShadowBlack 0%, $black 100%);
             -webkit-animation: hide 0.5s 0.3s linear both;
             -moz-animation: hide 0.5s 0.3s linear both;
@@ -168,11 +340,11 @@
           animation: turn 0.5s 0.5s linear both;
 
           .shadow {
-            background: -moz-linear-gradient(top, $black 0%, $tileShadowBlack 100%);
+            background: -moz-linear-gradient(to top, $black 0%, $tileShadowBlack 100%);
             background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $black), color-stop(100%, $tileShadowBlack));
-            background: linear-gradient(top, $black 0%, $tileShadowBlack 100%);
-            background: -o-linear-gradient(top, $black 0%, $tileShadowBlack 100%);
-            background: -ms-linear-gradient(top, $black 0%, $tileShadowBlack 100%);
+            background: linear-gradient(to top, $black 0%, $tileShadowBlack 100%);
+            background: -o-linear-gradient(to top, $black 0%, $tileShadowBlack 100%);
+            background: -ms-linear-gradient(to top, $black 0%, $tileShadowBlack 100%);
             background: linear-gradient(to bottom, $black 0%, $tileShadowBlack 100%);
             -webkit-animation: hide 0.5s 0.3s linear both;
             -moz-animation: hide 0.5s 0.3s linear both;

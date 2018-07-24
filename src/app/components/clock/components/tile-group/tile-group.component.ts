@@ -1,6 +1,3 @@
-/**
- * Created by hkuehl on 08.05.2017.
- */
 import {Component, Input, OnChanges, OnInit} from '@angular/core';
 
 @Component({
@@ -28,14 +25,12 @@ export class TileGroupComponent implements OnInit, OnChanges {
     }
 
     private splitNumber() {
-        this.flag = this.number.toString().length > 2;
+        this.flag = this.number ? this.number.toString().length > 2 : false;
         if(!this.number && this.number !== 0) return;
-        let stringNumber = this.number.toString();
-        let stringChar = stringNumber.split('');
+        let stringChar = this.number.toString().split('');
         if(stringChar.length === 1) {
-            let tmp = stringChar[0];
+            stringChar.push(stringChar[0]);
             stringChar[0] = '0';
-            stringChar.push(tmp);
         }
         if(this.tiles.length === stringChar.length) {
             for (let i = 0; i < this.tiles.length; i++) {
@@ -43,9 +38,8 @@ export class TileGroupComponent implements OnInit, OnChanges {
             }
         } else {
             this.tiles = [];
-            for (let x of stringChar) {
-                this.tiles.push(Number(x));
-
+            for (let digit of stringChar) {
+                this.tiles.push(Number(digit));
             }
         }
     }
