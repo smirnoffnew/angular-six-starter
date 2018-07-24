@@ -6,6 +6,7 @@ import {routing} from "./routing";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {AppComponent} from './app.component';
 import {AuthGuard} from "./core/auth.guard.service";
+import {CountdownService} from "./core/countdown.service/countdown.service";
 
 @NgModule({
     declarations: [AppComponent],
@@ -17,7 +18,7 @@ import {AuthGuard} from "./core/auth.guard.service";
         routing
     ],
     exports: [BrowserModule],
-    providers: [AuthGuard],
+    providers: [AuthGuard, CountdownService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
