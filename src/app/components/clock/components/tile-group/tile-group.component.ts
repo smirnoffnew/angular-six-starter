@@ -28,7 +28,7 @@ export class TileGroupComponent implements OnInit, OnChanges {
     }
 
     private splitNumber() { debugger;
-        // this.flag = this.number.toString().length > 2;
+        this.flag = this.number.toString().length > 2;
         if(!this.number && this.number !== 0) return;
         let stringNumber = this.number.toString();
         let stringChar = stringNumber.split('');
