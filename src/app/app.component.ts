@@ -6,41 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  style: object = {};
-  params: object = {};
-  width: number = 100;
-  height: number = 100;
+  config:any = {
+    color: ['#DA0463', '#404B69', '#DBEDF3'],
+    connectParticles: true,
+    maxParticles: 100,
+    sizeVariations:2,
+    speed: 0.4,
+    minDistance: 150
+  };
 
   constructor() {
   }
 
 
   ngOnInit() {
-    this.style = {
-      'position': 'absolute',
-      'width': '100%',
-      'height': '100%',
-      'z-index': -1,
-      'top': 0,
-      'left': 0,
-      'right': 0,
-      'bottom': 0,
-      'background-color': '#000'
-    };
-
-    this.params = {
-      particles: {
-        number: {
-          value: 150,
-        },
-        color: {
-          value: '#ff0000'
-        },
-        shape: {
-          type: 'triangle',
-        },
-      }
-    };
   }
 
 }

@@ -29,3 +29,7 @@
     margin-top: 25px;
     color: white;
 }
+canvas {
+    position: absolute;
+    background: #000;
+}
