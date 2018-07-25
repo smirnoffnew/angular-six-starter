@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~normalize.css/normalize.css';
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
  .scroll-view-inner-container{
     overflow-y: hidden !important;
 }
@@ -21,21 +22,6 @@
 
 .awesome-calendar .cell.hovered {
     background: transparent !important;
-}
-
-.particles-container {
-    background-color: #000 !important;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.year-progress-title{
-    color: white;
-    text-align: center;
-    position: relative;
 }
 
 .awesome-calendar {

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {CountdownService} from "./core/countdown.service/countdown.service";
 
 @Component({
   selector: 'app-root',
@@ -7,28 +6,18 @@ import {CountdownService} from "./core/countdown.service/countdown.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public title:string = 'app';
-  public progress: number;
   style: object = {};
   params: object = {};
   width: number = 100;
   height: number = 100;
 
-  constructor(public countdownService: CountdownService) {
+  constructor() {
   }
 
 
   ngOnInit() {
-    this.countdownService.progress$.subscribe(
-        (prg) => {
-          this.progress = prg;
-        },
-        (error) => {
-          console.log('errrr');
-        });
-
     this.style = {
-      'position': 'fixed',
+      'position': 'absolute',
       'width': '100%',
       'height': '100%',
       'z-index': -1,
@@ -36,12 +25,13 @@ export class AppComponent {
       'left': 0,
       'right': 0,
       'bottom': 0,
+      'background-color': '#000'
     };
 
     this.params = {
       particles: {
         number: {
-          value: 200,
+          value: 150,
         },
         color: {
           value: '#ff0000'
