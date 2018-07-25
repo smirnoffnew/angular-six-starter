@@ -42,7 +42,7 @@ export class CalendarComponent implements OnInit, AfterViewInit {
         this.myParams = {
             particles: {
                 number: {
-                    value: 200,
+                    value: 300,
                 },
                 color: {
                     value: '#ff0000'
@@ -56,7 +56,6 @@ export class CalendarComponent implements OnInit, AfterViewInit {
 
 
     ngAfterViewInit() {
-        $('.nav-button').trigger( "click" );
     }
 
 
