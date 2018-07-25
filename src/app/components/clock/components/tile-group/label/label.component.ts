@@ -13,6 +13,7 @@ export class LabelComponent implements OnInit, OnChanges {
     @Input() text: string;
 
     constructor() {
+        this.text = 'asdfasdfasdfasdf';
     }
 
     ngOnInit() {

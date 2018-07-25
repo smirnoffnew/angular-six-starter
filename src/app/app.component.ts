@@ -9,9 +9,9 @@ export class AppComponent {
   config:any = {
     color: ['#DA0463', '#404B69', '#DBEDF3'],
     connectParticles: true,
-    maxParticles: 100,
+    maxParticles: 120,
     sizeVariations:2,
-    speed: 0.4,
+    speed: 0.6,
     minDistance: 150
   };
 
