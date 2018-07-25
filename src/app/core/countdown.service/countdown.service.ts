@@ -15,7 +15,7 @@ export class CountdownService {
     start() {
         setInterval(() => {
             this.progress$.next(this.calculateYearProgress());
-        }, 1000);
+        }, 100000);
     }
 
     calculateYearProgress() {

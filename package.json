@@ -24,6 +24,7 @@
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
     "@types/jquery": "^3.3.5",
+    "angular-particle": "^1.0.4",
     "core-js": "^2.5.4",
     "extdate": "^0.3.4",
     "hammerjs": "^2.0.8",

@@ -1,9 +1,10 @@
-<div class="content" fxLayout="column" fxFlex="1 0 auto" fxLayoutAlign="center center">
+<div class="content clock-content" fxLayout="column" fxFlex="1 0 auto" fxLayoutAlign="center center">
     <div class="clock-container">
         <clock></clock>
     </div>
-    <h1 *ngIf="true">Year Progress {{progress}}%</h1>
-    <mat-progress-bar mode="determinate" value={{progress}}></mat-progress-bar>
+    <h1 class="year-progress-title">Year Progress {{progress}}%</h1>
+    <mat-progress-bar mode="determinate" value={{progress}} color="red"></mat-progress-bar>
+
     <infinite-calendar></infinite-calendar>
 </div>
 

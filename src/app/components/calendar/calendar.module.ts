@@ -8,6 +8,7 @@ import {InfiniteCalendarModule} from "ng-infinite-calendar";
 import {MatModule} from "../../mat.module";
 import {CommonModule} from '@angular/common';
 import {ClockModule} from "../clock/clock.module";
+import { ParticlesModule } from 'angular-particle';
 
 @NgModule({
     declarations: [ CalendarComponent ],

@@ -3,17 +3,49 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
  .scroll-view-inner-container{
     overflow-y: hidden !important;
-
 }
 
 .scroll-view-outer-container {
-    box-shadow: 5px 6px 30px 5px rgba(136, 136, 136, 0.8) !important;
+    box-shadow: 5px 5px 30px 5px rgba(136, 136, 136, 0.6) !important;
+    background-color: black;
+    opacity: 0.8;
+}
+
+.mat-list-item-content {
+    color: red !important;
+}
+
+.mat-progress-bar-fill::after {
+    background-color: darkslategrey;
 }
 
 .awesome-calendar .cell.hovered {
     background: transparent !important;
 }
 
-/*mat-progress-bar .mat-progress-bar-primary.mat-progress-bar-fill.mat-progress-bar-element {*/
-    /*background-color: red !important;*/
-/*}*/
+.particles-container {
+    background-color: #000 !important;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.year-progress-title{
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.awesome-calendar {
+    position: relative;
+    margin-top: 25px;
+    color: white;
+}
+
+
+.clock-content {
+    width: 100%;
+    height: 100%;
+}

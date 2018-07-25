@@ -7,6 +7,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import {AppComponent} from './app.component';
 import {AuthGuard} from "./core/auth.guard.service";
 import {CountdownService} from "./core/countdown.service/countdown.service";
+import {ParticlesModule} from "angular-particle";
 
 @NgModule({
     declarations: [AppComponent],
@@ -15,7 +16,8 @@ import {CountdownService} from "./core/countdown.service/countdown.service";
         BrowserAnimationsModule,
         FlexLayoutModule,
         MatModule,
-        routing
+        routing,
+        ParticlesModule
     ],
     exports: [BrowserModule],
     providers: [AuthGuard, CountdownService],
