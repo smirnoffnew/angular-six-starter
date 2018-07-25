@@ -9,8 +9,8 @@ import {CountdownService} from "./core/countdown.service/countdown.service";
 export class AppComponent {
   public title:string = 'app';
   public progress: number;
-  myStyle: object = {};
-  myParams: object = {};
+  style: object = {};
+  params: object = {};
   width: number = 100;
   height: number = 100;
 
@@ -27,7 +27,7 @@ export class AppComponent {
           console.log('errrr');
         });
 
-    this.myStyle = {
+    this.style = {
       'position': 'fixed',
       'width': '100%',
       'height': '100%',
@@ -38,7 +38,7 @@ export class AppComponent {
       'bottom': 0,
     };
 
-    this.myParams = {
+    this.params = {
       particles: {
         number: {
           value: 200,
