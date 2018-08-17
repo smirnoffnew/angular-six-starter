@@ -1,6 +1,7 @@
 <div class="wrapper">
-    <tile-group [number]="days"></tile-group>
-    <tile-group [number]="hours"></tile-group>
-    <tile-group [number]="minutes"></tile-group>
-    <tile-group [number]="seconds" [dots]="false"></tile-group>
+    <div style="color:#000; font-size: 30px;"> sssssssssssssssss {{timeSub | async}}</div>
+    <tile-group [number]="days$ | async"></tile-group>
+    <tile-group [number]="hours$ | async"></tile-group>
+    <tile-group [number]="minutes$ | async"></tile-group>
+    <tile-group [number]="seconds$ | async" [dots]="false"></tile-group>
 </div>

@@ -2,42 +2,42 @@
  * Created by hkuehl on 08.05.2017.
  */
 import {Component, OnInit} from '@angular/core';
+import {CountdownService} from '../../../../core/countdown.service/countdown.service';
+import {map} from 'rxjs/operators';
 
 @Component({
-    selector: 'flip-clock',
-    templateUrl: 'flip-clock.component.html',
-    styleUrls: ['flip-clock.component.scss']
+  selector: 'app-flip-clock',
+  templateUrl: 'flip-clock.component.html',
+  styleUrls: ['flip-clock.component.scss']
 })
 
 export class FlipClockComponent implements OnInit {
-    currNumber: number;
-    seconds: number;
-    minutes: number;
-    hours: number;
-    days: number;
+  timeSub: any = this.countdownService.timeSub$;
+  days$: any = 0;
+  hours$: any = 0;
+  minutes$: any = 0;
+  seconds$: any = 0;
 
-    constructor() {
-        this.currNumber = ((new Date('01/01/2019').getTime() / 1000) - (new Date().getTime() / 1000));
-        this.seconds = 0;
-        this.minutes = 0;
-        this.hours = 0;
-    }
+  constructor(private countdownService: CountdownService) {
+  }
 
-    ngOnInit() {
-        this.start();
-    }
+  ngOnInit() {
+    this.days$ = this.timeSub.pipe(map((data: number) => Math.floor(data / 3600 / 24)));
+    this.hours$ = this.timeSub.pipe(map((data: number) => Math.floor((data - (Math.floor(data / 3600 / 24) * 3600 * 24)) / 3600)));
+    this.minutes$ = this.timeSub.pipe(map((data: number) =>
+      Math.floor((data - (
+        Math.floor(data / 3600 / 24) * 3600 * 24 +
+        Math.floor((data - (
+        Math.floor(data / 3600 / 24) * 3600 * 24)) / 3600) * 3600)) / 60)
+    ));
 
-    start() {
-        setInterval(() => {
-            this.currNumber--;
-            this.splitNumber();
-        }, 1000);
-    }
+    this.seconds$ = this.timeSub.pipe(map((data: number) =>
+      Math.floor(data -
+        Math.floor(data / 3600 / 24) * 3600 * 24 -
+        Math.floor((data - (Math.floor(data / 3600 / 24) * 3600 * 24)) / 3600) * 3600 -
+        Math.floor((data - (Math.floor(data / 3600 / 24) * 3600 * 24 + Math.floor((data - (
+        Math.floor(data / 3600 / 24) * 3600 * 24)) / 3600) * 3600)) / 60) * 60)
+    ));
+  }
 
-    private splitNumber() {
-        this.days = Math.floor(this.currNumber / 3600 / 24);
-        this.hours = Math.floor((this.currNumber - (this.days * 3600 * 24)) / 3600);
-        this.minutes = Math.floor((this.currNumber - (this.days * 3600 * 24 + this.hours * 3600)) / 60);
-        this.seconds = Math.floor(this.currNumber - this.days * 3600 * 24 - this.hours * 3600 - this.minutes * 60);
-    }
 }

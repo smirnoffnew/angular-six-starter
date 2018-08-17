@@ -38,12 +38,10 @@ const routes = [
         loadChildren: './components/clock/clock.module#ClockModule',
         canLoad: [AuthGuard]
     },
-
-
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'home'
+        redirectTo: 'calendar'
     },
 ];
 
