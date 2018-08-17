@@ -1,12 +1,24 @@
 .scroll-view-inner-container {
-    overflow-y: hidden !important;
-    opacity: 0.8;
+  overflow-y: hidden !important;
+  opacity: 0.8;
 }
 
-.year-progress-title{
-    color: white;
-    text-align: center;
-    position: relative;
-    font-family: Roboto;
-    font-weight: 500;
+.year-progress-title {
+  color: white;
+  text-align: center;
+  position: relative;
+  font-family: Roboto;
+  font-weight: 500;
 }
+
+.clock-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+

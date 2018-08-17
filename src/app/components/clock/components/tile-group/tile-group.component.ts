@@ -25,10 +25,16 @@ export class TileGroupComponent implements OnInit, OnChanges {
   }
 
   private splitNumber() {
-    if(!this.number && this.number !== 0) return;
+    if (!this.number && this.number !== 0) return;
     this.tiles = [];
     for (const digit of this.number.toString().split('')) {
-      this.tiles.push(Number(digit));
+      if (this.number.toString().split('').length === 1) {
+        this.tiles.push(Number(0));
+        this.tiles.push(Number(digit));
+      } else {
+        this.tiles.push(Number(digit));
+      }
+
     }
     this.flag = this.tiles.length > 2;
   }

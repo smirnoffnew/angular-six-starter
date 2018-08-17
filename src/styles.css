@@ -29,7 +29,16 @@
     margin-top: 25px;
     color: white;
 }
-canvas {
-    position: absolute;
-    background: #000;
+
+.background-particles {
+  position: absolute;
+  background: #000;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.mat-drawer-container{
+  background-color: transparent !important;
 }

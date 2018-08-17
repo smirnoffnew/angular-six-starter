@@ -7,7 +7,6 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import {AppComponent} from './app.component';
 import {AuthGuard} from "./core/auth.guard.service";
 import {CountdownService} from "./core/countdown.service/countdown.service";
-import {NgxParticlesjsModule, NgxParticlesjsService} from "ngx-particlesjs";
 
 @NgModule({
     declarations: [AppComponent],
@@ -16,11 +15,10 @@ import {NgxParticlesjsModule, NgxParticlesjsService} from "ngx-particlesjs";
         BrowserAnimationsModule,
         FlexLayoutModule,
         MatModule,
-        routing,
-        NgxParticlesjsModule
+        routing
     ],
     exports: [BrowserModule],
-    providers: [AuthGuard, CountdownService, NgxParticlesjsService],
+    providers: [AuthGuard, CountdownService,],
     bootstrap: [AppComponent]
 })
 export class AppModule {
